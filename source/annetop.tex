@@ -57,7 +57,7 @@ headings=big]{scrbook} % Document font size and paper size
 \newfontfamily\chapterfont{EB Garamond}
 %\newfontfamily\mytitlefont{GramophoneShadedNF.ttf}
 %\newfontfamily\myauthorfont{Gramophone.NF.ttf}
-\newfontfamily\mytitlefont{QTBlackForest}
+\newfontfamily\mytitlefont{trinigan.ttf}
 \newfontfamily\myauthorfont{QTBlackForest}
 
 \newfontfamily\lettrinefont{FloralCapitals.ttf}
@@ -71,16 +71,6 @@ headings=big]{scrbook} % Document font size and paper size
 \renewcommand*{\chapterformat}{\chaptername~\thechapter}
 %\newcommand*\hideentrynumber[1]{}
 
-\makeatletter
-\@ifclasswith{scrbook}{a5paper}
-{%
- 
-%  
-}{%
-%\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
-%\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
-}
-\makeatother
 
 \newcount\zzc
 \makeatletter
@@ -112,12 +102,10 @@ headings=big]{scrbook} % Document font size and paper size
 \defaultfontfeatures{Ligatures=TeX}
 
 \automark{chapter}
-%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername\ \arabic\thechapter.\ #1}}{}}
 \lehead{Anne of Green Gables}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \arabic{chapter}:\ #1}{}}
-
+%we're using Roman numerals in the chapter names themselves and it's a PITA to decode Roman numerals each time: redefine chaptermark to use Arabic numerals in the header
 \rohead{\leftmark}
-%\rohead{Chapter \arabic{chapter}: \chaptertitle}
 \flushbottom
 
 \graphicspath{ {./images/} }
@@ -136,7 +124,7 @@ headings=big]{scrbook} % Document font size and paper size
 
 \frontmatter
 \pagestyle{empty}
-\includepdf[width=\textwidth]{aog2.png}
+\includepdf[width=1.2\textwidth]{aogcover.png}
  
 %\begin{titlepage}
 %   \recalctypearea
@@ -239,10 +227,13 @@ EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claud
 \vfill
 Title page is set in »Elzevier Caps«, by Dieter Steffmann; and »Trinigan FG«, by Andreas Höfeld.\\steffmann.1001fonts.com\\fontgrube.1001fonts.com
 \vfill
-Chapter dropcaps are set in »Floral Capitals«, by 
-Vladimir Nikolic.\\www.coroflot.com/vladimirnikolic
+Chapter dropcaps are set in »Floral Capitals«, by Vladimir Nikolic.\\www.coroflot.com/vladimirnikolic
 \vfill
-Typeset in \LaTeX{}.
+Title page decoration is by an anonymous artist and is drawn from an advertisement placed in Charles Klary's 1903 book \textit{La Pose et l’éclairage en photographie dans les ateliers et les appartements}.
+\vfill
+\textit{Anne of Green Gables}, the first novel by Lucy Maud (L.M.) Montgomery (1874-1942), was first published in 1908 by L.C. Page \& Co., Boston (USA).
+\vfill
+Typeset in \LaTeX{}. Last revised \today.
 \end{center}
 \thispagestyle{empty}
 \end{document}
