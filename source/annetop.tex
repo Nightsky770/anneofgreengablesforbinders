@@ -1,64 +1,17 @@
 \documentclass[
-a5paper,
-%paper=5.5in:8.5in,
-BCOR=7mm,
-twoside,
-DIV=calc,
-11pt,
-usegeometry,
-chapterprefix,
-headings=big]{scrbook} % Document font size and paper size
+%a5paper,
+paper=5.5in:8.5in,
+]{scrbook} % Document font size and paper size
 
-\usepackage{graphicx}
-\usepackage{verse}
-\usepackage{xcolor}
-\usepackage{fontspec}
-\usepackage[T1]{fontenc} % International character encodings
-\usepackage{makeidx}
-\usepackage{lettrine}
-\usepackage{scrlayer-scrpage}
-\usepackage{pifont}
-\usepackage{enumitem}
-\usepackage{caption}
-\usepackage[maxlevel=3]{csquotes}
-\usepackage[export]{adjustbox}
-\usepackage{polyglossia}
-\usepackage{afterpage}
-\usepackage{microtype}
-\usepackage{tocbasic}
-\usepackage[pass]{geometry}
-\usepackage{setspace}
-\usepackage{subfiles}
-\usepackage{rotating}
-\usepackage[all]{nowidow}
-\usepackage{setspaceenhanced}
-\usepackage{ebgaramond} 
-\usepackage{ellipsis}
-\usepackage{floatpag}
-\usepackage{fontspec}
-\usepackage{pdfpages}
+\usepackage{bindery}
+\usepackage{dropcaps}
 
-\MakeAutoQuote{»}{«}
-\catcode`\—=13
-\protected\def—{\allowbreak\textemdash\allowbreak}
-\newcommand\longdash{\mbox{---\,}\ignorespaces{}}
-
-\setmainfont{EB Garamond}[UprightFeatures={CharacterVariant=11}]
 \setdefaultlanguage[variant=canadian]{english}
 
 \renewcommand{\thechapter}{\Roman{chapter}}
 
-\floatpagestyle{empty}
-\rotfloatpagestyle{empty}
 
-\newcommand{\HUGE}{\fontsize{70}{80}\selectfont}
-\newcommand{\moderatelyhuge}{\fontsize{35}{45}\selectfont}
-\newcommand{\reasonablyhuge}{\fontsize{50}{60}\selectfont}
 \newfontfamily\chapterfont{EB Garamond}
-%\newfontfamily\mytitlefont{GramophoneShadedNF.ttf}
-%\newfontfamily\myauthorfont{Gramophone.NF.ttf}
-\newfontfamily\mytitlefont{trinigan.ttf}
-\newfontfamily\myauthorfont{QTBlackForest}
 
 \newfontfamily\lettrinefont{FloralCapitals.ttf}
 \renewcommand{\LettrineFontHook}{\fontspec{FloralCapitals.ttf}}
@@ -66,28 +19,6 @@ headings=big]{scrbook} % Document font size and paper size
 \setkomafont{chapter}{\chapterfont\Huge\bfseries}
 \addtokomafont{disposition}{\normalfont}
 %\setkomafont{part}{\chapterfont\HUGE\bfseries}
-%\addtokomafont{partnumber}{\chapterfont\moderatelyhuge}
-%\renewcommand*{\partformat}{\partname~\thepart} %renew so it doesn't have the trailing period
-\renewcommand*{\chapterformat}{\chaptername~\thechapter}
-%\newcommand*\hideentrynumber[1]{}
-
-
-\newcount\zzc
-\makeatletter
-\def\zz{%
-\ifnum\prevgraf<\c@L@lines
-\zzc\z@
-\loop
-\ifnum\zzc<\prevgraf
-\advance\zzc\@ne
-\afterassignment\zzda\count@\L@parshape\relax
-\repeat
-\parshape\L@parshape
-\fi}
-\def\zzda{\afterassignment\zzdb\dimen@}
-\def\zzdb{\afterassignment\zzdef\dimen@}
-\def\zzdef#1\relax{\edef\L@parshape{\the\numexpr\count@-1\relax\space #1}}
-\makeatother
 
 \BeforeTOCHead[toc]{%
   \KOMAoptions{parskip=false}% no parskip in ToC
@@ -95,67 +26,29 @@ headings=big]{scrbook} % Document font size and paper size
 \DeclareTOCStyleEntry[beforeskip=0.2cm,dynnumwidth=true,linefill=\TOCLineLeaderFill]{chapter}{chapter}
 }
 
-\headsep=10pt
-\headheight=45pt
-\footskip=30pt
-
-\defaultfontfeatures{Ligatures=TeX}
-
 \automark{chapter}
 \lehead{Anne of Green Gables}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \arabic{chapter}:\ #1}{}}
 %we're using Roman numerals in the chapter names themselves and it's a PITA to decode Roman numerals each time: redefine chaptermark to use Arabic numerals in the header
 \rohead{\leftmark}
+
 \flushbottom
 
-\graphicspath{ {./images/} }
 
 
 \hyphenation{}
 
 
 \begin{document}
-%\setlength{\epigraphwidth}{0.8\textwidth}
-%\renewcommand{\epigraphflush}{center}
-%\renewcommand{\sourceflush}{center}
-%\renewcommand*{\chaptermarkformat}{}
-%\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
-%\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
 
 \frontmatter
 \pagestyle{empty}
 \includepdf[width=1.2\textwidth]{aogcover.png}
  
-%\begin{titlepage}
-%   \recalctypearea
-% \newgeometry{left=10mm,right=10mm,top=7mm, bottom=7mm}
-%% \includegraphics[width=\coverimagesize]{daisytop}
-%  \begin{center}
-%
-%  \setstretch{1.8}\mytitlefont
-%{\setstretch{1.8}\HUGE Anne}\\
-%\vspace{0.5cm}
-%{\setstretch{1.8}\reasonablyhuge of}\\
-%{\setstretch{1.8}\HUGE Green Gables}\\
-%\vspace*{.5cm}
-%
-% \end{center}
-% \vspace*{.1cm}
-% \begin{center}\setstretch{1.5}\myauthorfont
-%{\setstretch{1.5}\reasonablyhuge L.M. Montgomery}\\
-%
-%\end{center}
-%% \includegraphics[width=\coverimagesize]{daisybottom}
-%\end{titlepage}
-%
-%  \recalctypearea
-%\restoregeometry
 
 
 
 \pagestyle{plain}
-
-\renewcommand*\raggedchapter{\centering}
 
 
 
@@ -223,15 +116,26 @@ headings=big]{scrbook} % Document font size and paper size
 \KOMAoptions{headings=openleft}
 \chapter*{Colophon}
 \begin{center}
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century. This digital version reproduces the original design by Claude Garamont closely: the source for the letterforms is a scan of a specimen known as the \enquote{Berner specimen,} which was composed in 1592 by Conrad Berner, the son-in-law of Christian Egenolff and his successor at the Egenolff print office.  \\github.com/georgd/EB-Garamond
+\textit{Anne of Green Gables}, the first novel by Lucy Maud (L.M.) Montgomery (1874–1942), was first published in 1908 by L.C. Page \& Co., Boston (USA).\\gutenberg.org/ebooks/45
 \vfill
-Title page is set in »Elzevier Caps«, by Dieter Steffmann; and »Trinigan FG«, by Andreas Höfeld.\\steffmann.1001fonts.com\\fontgrube.1001fonts.com
+\rule{0.5\textwidth}{.4pt}
 \vfill
-Chapter dropcaps are set in »Floral Capitals«, by Vladimir Nikolic.\\www.coroflot.com/vladimirnikolic
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century.\\github.com/georgd/EB-Garamond
+\vfill
+\rule{0.5\textwidth}{.4pt}
+\vfill
+Title page is set in »Elzevier Caps«, by Dieter Steffmann; and »Trinigan FG«, by Andreas Höfeld. Chapter dropcaps are set in »Floral Capitals«, by Vladimir Nikolic. \\steffmann.1001fonts.com\\fontgrube.1001fonts.com\\www.coroflot.com/vladimirnikolic
+\vfill
+\rule{0.5\textwidth}{.4pt}
 \vfill
 Title page decoration is by an anonymous artist and is drawn from an advertisement placed in Charles Klary's 1903 book \textit{La Pose et l’éclairage en photographie dans les ateliers et les appartements}.
 \vfill
-\textit{Anne of Green Gables}, the first novel by Lucy Maud (L.M.) Montgomery (1874-1942), was first published in 1908 by L.C. Page \& Co., Boston (USA).
+\rule{0.5\textwidth}{.4pt}
+\vfill
+
+This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed: creativecommons.org/publicdomain/zero/1.0/
+\vfill
+\rule{0.5\textwidth}{.4pt}
 \vfill
 Typeset in \LaTeX{}. Last revised \today.
 \end{center}

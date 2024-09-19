@@ -4,7 +4,7 @@
 
 I have tried to adhere to Canadian usage, which incorporates elements of both British and American usage: so *colour*, *neighbour*, *centre* alongside *cozy*, *analyze*, *tire*.
 
-CW: colorism, use of ethnic slur "gypsy" (uncensored), implied child abuse, heroine loses both parents in back story and one parent during the narrative.
+CW: colorism, use of ethnic slur "gypsy" (uncensored), *actual literal Victorian street urchins* referred to as "London street Arabs", implied child abuse in back story, heroine loses both parents in back story and a parental figure during the narrative.
 
 If you are using US letter paper (8.5" x 11"), download the "letter" folder containing the signatures and print them out, double-sided, flip on short side. Please note that the letter version contains 19 signatures.
 
@@ -12,7 +12,3 @@ If you are using A4, download the "a4" folder containing the signatures and prin
 
 TeX originals are in the source folder.
 
-Fonts used are:
-
-* EB Garamond: https://www.1001freefonts.com/eb-garamond.font
-* Floral Capitals: https://www.1001fonts.com/floral-capitals-font.html
