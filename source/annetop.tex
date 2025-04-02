@@ -1,38 +1,17 @@
 \documentclass[
-%a5paper,
-paper=5.5in:8.5in,
-]{scrbook} % Document font size and paper size
+a5paper,
+%paper=5.5in:8.5in,
+]{scrbook}
 
-\usepackage{bindery}
+\title{Anne of Green Gables}
+
+\usepackage[namedChapters,romanChapters]{bindery}
 \usepackage{dropcaps}
 
 \setdefaultlanguage[variant=canadian]{english}
 
-\renewcommand{\thechapter}{\Roman{chapter}}
 
-
-\newfontfamily\chapterfont{EB Garamond}
-
-\newfontfamily\lettrinefont{FloralCapitals.ttf}
-\renewcommand{\LettrineFontHook}{\fontspec{FloralCapitals.ttf}}
-
-\setkomafont{chapter}{\chapterfont\Huge\bfseries}
-\addtokomafont{disposition}{\normalfont}
-%\setkomafont{part}{\chapterfont\HUGE\bfseries}
-
-\BeforeTOCHead[toc]{%
-  \KOMAoptions{parskip=false}% no parskip in ToC
- % \RedeclareSectionCommand[afterskip=1sp minus 1sp]{chapter}% no skip after ToC title
-\DeclareTOCStyleEntry[beforeskip=0.2cm,dynnumwidth=true,linefill=\TOCLineLeaderFill]{chapter}{chapter}
-}
-
-\automark{chapter}
-\lehead{Anne of Green Gables}
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \arabic{chapter}:\ #1}{}}
-%we're using Roman numerals in the chapter names themselves and it's a PITA to decode Roman numerals each time: redefine chaptermark to use Arabic numerals in the header
-\rohead{\leftmark}
-
-\flushbottom
+\setdropcaps{FloralCapitals.ttf}
 
 
 
@@ -43,7 +22,7 @@ paper=5.5in:8.5in,
 
 \frontmatter
 \pagestyle{empty}
-\includepdf[width=1.2\textwidth]{aogcover.png}
+\includepdf[width=\coverwidth]{titlepage.jpg}
  
 
 
@@ -116,24 +95,33 @@ paper=5.5in:8.5in,
 \KOMAoptions{headings=openleft}
 \chapter*{Colophon}
 \begin{center}
-\textit{Anne of Green Gables}, the first novel by Lucy Maud (L.M.) Montgomery (1874–1942), was first published in 1908 by L.C. Page \& Co., Boston (USA).\\gutenberg.org/ebooks/45
+\begin{minipage}{\textwidth}
+\textit{Anne of Green Gables}, the first novel by Lucy Maud (L.M.) Montgomery (1874–1942), was first published in 1908 by L.C. Page \& Co., Boston (USA).
+\end{minipage}
+\vfill
+gutenberg.org/ebooks/45
 \vfill
 \rule{0.5\textwidth}{.4pt}
 \vfill
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century.\\github.com/georgd/EB-Garamond
-\vfill
-\rule{0.5\textwidth}{.4pt}
-\vfill
-Title page is set in »Elzevier Caps«, by Dieter Steffmann; and »Trinigan FG«, by Andreas Höfeld. Chapter dropcaps are set in »Floral Capitals«, by Vladimir Nikolic. \\steffmann.1001fonts.com\\fontgrube.1001fonts.com\\www.coroflot.com/vladimirnikolic
-\vfill
-\rule{0.5\textwidth}{.4pt}
-\vfill
-Title page decoration is by an anonymous artist and is drawn from an advertisement placed in Charles Klary's 1903 book \textit{La Pose et l’éclairage en photographie dans les ateliers et les appartements}.
-\vfill
-\rule{0.5\textwidth}{.4pt}
-\vfill
+\begin{minipage}{\textwidth}
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century.
 
+Title page is set in <Elzevier Caps>, by Dieter Steffmann; and <Trinigan FG>, by Andreas Höfeld. Chapter dropcaps are set in <Floral Capitals>, by Vladimir Nikolic. 
+\end{minipage}
+\vfill
+github.com/georgd/EB-Garamond\\steffmann.1001fonts.com\\fontgrube.1001fonts.com\\www.coroflot.com/vladimirnikolic
+\vfill
+\rule{0.5\textwidth}{.4pt}
+\vfill
+\begin{minipage}{\textwidth}
+Title page decoration is by an anonymous artist and is drawn from an advertisement placed in Charles Klary's 1903 book \textit{La Pose et l’éclairage en photographie dans les ateliers et les appartements}.
+\end{minipage}
+\vfill
+\rule{0.5\textwidth}{.4pt}
+\vfill
+\begin{minipage}{\textwidth}
 This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed: creativecommons.org/publicdomain/zero/1.0/
+\end{minipage}
 \vfill
 \rule{0.5\textwidth}{.4pt}
 \vfill
