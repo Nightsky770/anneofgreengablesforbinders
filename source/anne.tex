@@ -1,19 +1,20 @@
 \documentclass[
-a5paper,
-%paper=5.5in:8.5in,
+%a5paper,
+paper=5.5in:8.5in,
 ]{scrbook}
 
 \title{Anne of Green Gables}
 
 \usepackage[namedChapters,romanChapters]{bindery}
 \usepackage{dropcaps}
+\usepackage{epistolary}
 
 \setdefaultlanguage[variant=canadian]{english}
 
 
 \setdropcaps{FloralCapitals.ttf}
 
-
+\DeclareTOCStyleEntry[beforeskip=.3cm,linefill=\TOCLineLeaderFill,dynnumwidth=true]{chapter}{chapter}
 
 \hyphenation{}
 
@@ -22,29 +23,12 @@ a5paper,
 
 \frontmatter
 \pagestyle{empty}
-\includepdf[width=\coverwidth]{titlepage.jpg}
+\includepdf[width=\basicwidth]{titlepage.jpg}
  
-
-
-
 \pagestyle{plain}
-
-
-
 \KOMAoptions{headings=openleft}
-
-
-%\vspace*{-2\baselineskip}
 \tableofcontents
 \clearpage
-
-
-%\clearpage
-
-
-
-
-
 
 \mainmatter
 \pagestyle{headings}
@@ -101,29 +85,29 @@ a5paper,
 \vfill
 gutenberg.org/ebooks/45
 \vfill
-\rule{0.5\textwidth}{.4pt}
+\divider
 \vfill
 \begin{minipage}{\textwidth}
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century.
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16th century.
 
-Title page is set in <Elzevier Caps>, by Dieter Steffmann; and <Trinigan FG>, by Andreas Höfeld. Chapter dropcaps are set in <Floral Capitals>, by Vladimir Nikolic. 
+Title page is set in <Trinigan FG>, by Andreas Höfeld. Chapter dropcaps are set in <Floral Capitals>, by Vladimir Nikolic. 
 \end{minipage}
 \vfill
-github.com/georgd/EB-Garamond\\steffmann.1001fonts.com\\fontgrube.1001fonts.com\\www.coroflot.com/vladimirnikolic
+github.com/georgd/EB-Garamond\\fontgrube.1001fonts.com\\www.coroflot.com/vladimirnikolic
 \vfill
-\rule{0.5\textwidth}{.4pt}
+\divider
 \vfill
 \begin{minipage}{\textwidth}
-Title page decoration is by an anonymous artist and is drawn from an advertisement placed in Charles Klary's 1903 book \textit{La Pose et l’éclairage en photographie dans les ateliers et les appartements}.
+Title page decoration is by Ethel Larcombe (1876--1940) and was originally published in 1905 in \workname{Women painters of the world, from the time of Caterina Vigri, 1413-1463, to Rosa Bonheur and the present day,} by Walter Shaw Sparrow.
 \end{minipage}
 \vfill
-\rule{0.5\textwidth}{.4pt}
+\divider
 \vfill
 \begin{minipage}{\textwidth}
 This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed: creativecommons.org/publicdomain/zero/1.0/
 \end{minipage}
 \vfill
-\rule{0.5\textwidth}{.4pt}
+\divider
 \vfill
 Typeset in \LaTeX{}. Last revised \today.
 \end{center}
