@@ -2,7 +2,7 @@
 
 *Anne of Green Gables* for the DIY bookbinder. Available in US letter and A4 format. Text is in the public domain in the United States. Fonts used, to the best of my knowledge, are free to use for any purpose including commercial. Whatever original work of mine this effort represents, I place into the public domain. In other words, to the best of my knowledge you may make and sell copies of this. I am not a lawyer and you are responsible for compliance with your government's copyright law(s).
 
-I have tried to adhere to Canadian usage, which incorporates elements of both British and American usage: so *colour*, *neighbour*, *centre* alongside *cozy*, *analyze*, *tire*. I am indebted to Luke Martin's comprehensive comparison of Canadian, US, and British spellings at http://www.lukemastin.com/testing/spelling/cgi-bin/database.cgi?action=home
+I have tried to adhere to Canadian usage, which has commonalities with both British and American usage: so *colour*, *neighbour*, *centre* alongside *cozy*, *analyze*, *tire*. I am indebted to Luke Martin's comprehensive comparison of Canadian, US, and British spellings at http://www.lukemastin.com/testing/spelling/cgi-bin/database.cgi?action=home
 
 CW: colorism, use of ethnic slur "gypsy" (uncensored), *actual literal Victorian street urchins* referred to as "London street Arabs", implied child abuse in back story, heroine loses both parents in back story and a parental figure during the narrative.
 
