@@ -1,7 +1,3 @@
-Emendations:
-* First sentence of chapter 22 changed from Project Gutenberg's "And what are your eyes popping out of your head about. Now?" to the more grammatical "And what are your eyes popping out of your head about now?"
-
-
 Fonts used are:
 
 * EB Garamond: https://www.1001freefonts.com/eb-garamond.font
