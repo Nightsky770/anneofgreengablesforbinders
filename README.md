@@ -13,4 +13,5 @@ If you are using A4, download the "a4" folder containing the signatures and prin
 Source files (top-level and per-chapter files) are in the source directory for each book. You do not need them unless you are preparing your own version. I am using LuaLaTeX.
 
 Emendations:
+* First sentence of chapter 22 changed from Project Gutenberg's "And what are your eyes popping out of your head about. Now?" to the more grammatical "And what are your eyes popping out of your head about now?"
 * In chapter 30, the names of novels were originally not italicized. I have placed them in italics.
